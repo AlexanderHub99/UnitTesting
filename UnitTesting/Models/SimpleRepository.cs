@@ -1,6 +1,6 @@
 ﻿namespace UnitTesting.Models
 {
-    public class SimpleRepository
+    public class SimpleRepository : IRepository
     {
         private static SimpleRepository _simpleRepository = new SimpleRepository();
         private readonly Dictionary<string, Product> _products = new Dictionary<string, Product>();

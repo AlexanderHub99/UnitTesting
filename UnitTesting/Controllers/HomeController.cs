@@ -6,8 +6,8 @@ namespace UnitTesting.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly SimpleRepository _repository = SimpleRepository.simpleRepository;
-        public IActionResult Index() => View(_repository.Products.Where(p => p?.Price< 50));
+        public  IRepository repository = SimpleRepository.simpleRepository;
+        public IActionResult Index() => View(repository.Products);
         
         [HttpGet]
         public IActionResult AddProduct() => View(new Product());
@@ -15,7 +15,7 @@ namespace UnitTesting.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product p)
         {
-            _repository.AddProduct(p);
+            repository.AddProduct(p);
             return RedirectToAction("Index");
         }
     }
