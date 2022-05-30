@@ -2,9 +2,9 @@
 {
     public interface IRepository
     {
-       public IEnumerable<Product> Products { get; }
+        IEnumerable<Product> Products { get; }
         
-       public void AddProduct(Product p);
+        void AddProduct(Product p);
     }
 }
 
