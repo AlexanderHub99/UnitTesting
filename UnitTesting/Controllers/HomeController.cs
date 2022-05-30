@@ -10,7 +10,7 @@ namespace UnitTesting.Controllers
         public IActionResult Index() => View(repository.Products);
         
         [HttpGet]
-        public IActionResult AddProduct() => View(new Product());
+        public IActionResult AddProduct() => View();
 
         [HttpPost]
         public IActionResult AddProduct(Product p)
