@@ -30,7 +30,10 @@
         }
 
         public IEnumerable<Product> Products => _products.Values;
-        public void AddProduct(Product product) => _products.Add(product.Name,product);
+        public void AddProduct(Product product)
+        {
+            _products.Add(product.Name ?? "Null", product);
+        }
     }
 }
 
